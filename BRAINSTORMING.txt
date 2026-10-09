@@ -1,0 +1,35 @@
+PLANTEAMIENTO DEL JUEGO
+librerias de sonido???? grafico?????
+clases??
+clase barco??-> metodos--> cañonazo, daño recibido, 
+clase jugador(barco) tanto user como maquina
+clase talero(jugador)
+calse juego(tablero)->metodos de menu
+main(juego)
+juego(jugador)
+|
+|->tablero(jugador1,jugador2?)|
+        | creacion de tablero
+        |
+        |->jugador(barco)
+                |-metodos relacionados con acciones de jugador: jugar con maquina,  dentro de partida opcional() rendirse
+                |clases usadas : barco
+                |->barco()
+
+
+SON CLASES
+
+class jugador
+
+class tablero 
+        idea_: reciclado de tablero /2
+
+class juego
+
+class barco
+
+IDEAS
+_________________--
+vectores gen vert y hor ** barco
+
+
