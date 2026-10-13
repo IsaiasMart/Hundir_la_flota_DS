@@ -1,4 +1,3 @@
-from tablero import *
 class Barco:
     #tamanio puede ser cambiado de disposivcion usando su trasbersa
     def __init__(self, tamanio,coordenada_generatriz, orientacion ):
@@ -14,12 +13,16 @@ class Barco:
 
         return
     
+    
     def bomazo(self, coordenadas_destino:tuple):
         resultado= bool
 
         return resultado
-    def bombazo_recibido(self, coordenada):
 
-        return
+    
+    def bombazo_recibido(self, coordenada):
+        resultado=bool
+
+        return resultado
     
     
