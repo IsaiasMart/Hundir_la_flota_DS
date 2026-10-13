@@ -1,3 +1,4 @@
+import juego as ju
 
 def menu():
     print("BIENVENIDO")
@@ -7,9 +8,10 @@ def menu():
     m=int(input())
     match m:
         case 1:
-            pass
+           ju.iniciar_juego() 
         case 2:
             pass
+
 
 
     return
