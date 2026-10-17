@@ -1,18 +1,33 @@
+from tablero import Tablero 
+from barco import Barco
 class jugador:
-    def __init__(self, nombre="PC"):
+    def __init__ (self, tablero:Tablero, barcos:Barco, nombre="PC" ):
+
         self.nombre=nombre
+        self.tablero=tablero
+        self.barcos,barcos
+
+    #los func turnos estan compuestos de acciones-- funciones
+    def f():
+        return
+
+
+    def rendirse(self):
+        return True
+    
+
+    def disparo(self, coordenadas_destino:tuple,otro_jugado:jugador):
+        resultado= bool
+
+        return resultado
+  
     def turno(self):
         #menu de opciones del jugador
         return None
-    def eleccion_de_juego(self, opcion):
-        match opcion:
-            case 1:
-                pass
-            case 2:
-                pass
-            case 3:
-                pass
-            
-        return None
+#instancias de uso y pruebas de barco y tablero desde jugador 
+t1=Tablero()
+b1=Barco()
+
+
 
     

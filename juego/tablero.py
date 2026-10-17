@@ -1,5 +1,6 @@
 import numpy as np
 import string
+from barco import Barco 
 
 class Tablero:
     def __init__(self, dimensiones:tuple):
@@ -10,30 +11,46 @@ class Tablero:
         crea el tablero y lo retorna
         '''
 
-        tablero=np.full((self.dimensiones[0]+1,self.dimensiones[1]+1), "🌊")
+        tablero=np.full((self.dimensiones[0],self.dimensiones[1]), "🌊")
         return tablero
     
-    def formato_tablero(self):
-        '''
-        funcion para dar formato de juego con columnas de la A a la letra que se ajuste al tamaño designado por usuario
-        y filas con el numero tb asignado por usuario
-
-        retorna el tablero
-        '''
+    
+          
+    def posicion_posible(self, barco:Barco):
         tablero=self.crear_tablero()
-        lista_letras=['A','B','C','D','E','F','G','H','Y','J','K','L','M','O']
-        filas= tablero.shape[0]
-        columnas=tablero.shape[1]
         
-        for i in range(columnas):
-            nuevo_tablero=np.where(tablero[:,1]=="🌊", i, tablero)
-        return nuevo_tablero
+        if barco.coordenada_generatriz>tablero.shape:
+            raise IndexError("")
+        for i in range(barco.tamanio):
+            pass
+            
+        return
 
-    def formato_tablero1(self):
+    def pintar_barco(self,barco:Barco):
+        tablero=0
+        if  self.posicion_posible(barco):
+             pass
+        return tablero
+    
+    def conversion_coordenadas(self, coordenada_input):
+            letras = string.ascii_uppercase
+            coordenada_nuevo_input=()
+            for i in letras:
+                if coordenada_input[0]==i: 
+                    coordenada_nuevo_input[0]=i.index()
+                    coordenada_nuevo_input[1]-=1
+                    break
+            return coordenada_nuevo_input
+     
+    
+      #ultima funciuon para dar fomrato al tablero post-jugadas
+    def formato_tablero(self):
+        #ultima transformacion del tablero/ultime func q retorne tablerowzwz
         tablero = self.crear_tablero()
+        #-----------------------------
         filas, columnas = tablero.shape
-
         letras = string.ascii_uppercase
+
         if columnas > len(letras):
             raise ValueError(f"Máximo {len(letras)} columnas, pediste {columnas}")
 
@@ -41,18 +58,6 @@ class Tablero:
         numeros = np.array([str(i) for i in range(1, filas + 1)], dtype=object).reshape(-1, 1)
 
         cuerpo = np.hstack([numeros, tablero.astype(object)])
-        return np.vstack([cabecera, cuerpo])
-    '''
-    def pintar_barco(self,barco):
-        if barco.posicion_posible_barco():
-            pass
-        return None
-    '''
-
-    
-t=(5,5)
-t1=Tablero(t)
-
-#print(t1.formato_tablero())
-print(t1.formato_tablero1())
-
+        final=np.vstack([cabecera, cuerpo])
+        return final  
+#PARCIALMENTE TERMINADO
