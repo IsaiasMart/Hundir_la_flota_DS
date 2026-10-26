@@ -1,4 +1,4 @@
-import jugador as ju
+from jugador import Jugador 
 import numpy as np
 def pc_pos_posible_ataque():
     #idea principal: coordenada aleatoria si acierta 1/4 de probabilidad
@@ -15,16 +15,14 @@ class Juego:
     def modos_juego():
         # modo facil= aleatorio total/// modo dificil= pc con probabilidad modificada
         return
-    def inciciar_juego(self,ju:ju,otro_ju:ju):
-        i=input(">>")
-        while True:
-            ju.turno()
-            otro_ju.turno()
-            i+=1
-            if i ==4:
-                break
+    def inciciar_juego(self,ju:Jugador,otro_ju:Jugador):
+        print("nombre:")
+        nombre=input(">>") 
+        ju.n
 
         return None
+
+    
     def iniciar_juego_mod():
         return
 
@@ -32,4 +30,4 @@ class Juego:
 
 
 
-    #NO TERMINADO, FALTA MAS LOGICA
+    #NO TERMINADO, FALTA MAS LOGICA SOBRETODO DEFINIR MODOS E INICIAR VANILLA E INICIAR MOD
